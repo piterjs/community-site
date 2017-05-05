@@ -1,0 +1,16 @@
+{
+  "name": "community-site",
+  "version": "1.0.0",
+  "description": "Web application for communities managment",
+  "main": "api/index.js",
+  "repository": "git@github.com:piterjs/community-site.git",
+  "author": "piterjs <hi@piterjs.org>",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.2.0",
+    "nodemon": "^1.11.0"
+  },
+  "scripts": {
+    "start-api": "nodemon api/index.js"
+  }
+}
