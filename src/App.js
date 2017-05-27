@@ -3,6 +3,9 @@ import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'react-router-redux'
 import Routes from './Routes'
 import store, { history } from './store'
+import {
+  MainMenu
+} from './containers'
 
 class App extends Component {
   render() {
@@ -10,6 +13,7 @@ class App extends Component {
       <Provider store={store}>
         <ConnectedRouter history={history}>
           <div className="App">
+            <MainMenu />
             {Routes}
           </div>
         </ConnectedRouter>

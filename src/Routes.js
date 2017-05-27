@@ -1,24 +1,24 @@
 import React from 'react'
 import {
-  BrowserRouter,
-  Route
+  Route,
+  Switch
 } from 'react-router-dom'
 import {
   AboutPage,
   CalendarPage,
   ContactsPage,
-  MainPage
+  MainPage,
+  NotFoundPage
 } from './pages'
 
 const Routes = (
-  <BrowserRouter>
-    <div>
-      <Route path='/' component={MainPage} />
-      <Route path='/about' component={AboutPage} />
-      <Route path='/calendar' component={CalendarPage} />
-      <Route path='/contacts' component={ContactsPage} />
-    </div>
-  </BrowserRouter>
+  <Switch>
+    <Route exact path='/' component={MainPage} />
+    <Route path='/about' component={AboutPage} />
+    <Route path='/calendar' component={CalendarPage} />
+    <Route path='/contacts' component={ContactsPage} />
+    <Route component={NotFoundPage} />
+  </Switch>
 )
 
 export default Routes

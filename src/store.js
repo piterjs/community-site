@@ -28,13 +28,13 @@ const store = createStore(
    * */
   combineReducers({
     calendar,
-    routing: routerReducer
+    router: routerReducer
   }),
   initialState,
   composeEnhancers(
     applyMiddleware(
-      thunkMiddleware,
-      routerMiddleware(history)
+      routerMiddleware(history),
+      thunkMiddleware
     )
   )
 )

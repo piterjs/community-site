@@ -4,6 +4,10 @@ import { Menu } from '../../components'
 const MainMenu = () => (
   <Menu items={[
     {
+      url: '/',
+      name: 'Главная'
+    },
+    {
       url: '/about',
       name: 'О проекте'
     },
