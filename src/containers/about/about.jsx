@@ -31,6 +31,7 @@ const ComposedAboutInfoContainer = compose(
     store: PropTypes.object
   }),
   withProps(ownerProps => {
+    // TODO: get data each about page navigation
     ownerProps.store.dispatch(fetchAboutPageData())
 
     return ownerProps
