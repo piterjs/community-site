@@ -1,13 +1,11 @@
 const Router = require('koa-router')
+const mockedDatabase = require('../../mocks/database.dev')
+
 const router = new Router()
 
 router
   .get('/about', function (ctx, next) {
-    ctx.body = {
-      title: 'Информация о сообществе',
-      text: 'Произвольный текст'
-    }
-
+    ctx.body = mockedDatabase.about
     next()
   })
 
