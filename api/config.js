@@ -1,3 +1,3 @@
 module.exports = {
-  API_PORT: process.env.API_PORT
+  API_PORT: process.env.API_PORT || 3333
 }
