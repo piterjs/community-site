@@ -1,6 +1,6 @@
 import ajax from '../../ajax'
 
-import types from 'about.constants'
+import types from './about.constants'
 
 function fetchAboutPageData() {
   return (dispatch) => {
@@ -8,7 +8,7 @@ function fetchAboutPageData() {
       type: types.FETCH_ABOUT_PAGE_STARTED
     })
 
-    return ajax.get('/api/about')
+    const result = ajax.get('/about')
       .then(json => dispatch({
         type: types.FETCH_ABOUT_PAGE_COMPLETED,
         payload: json
@@ -17,7 +17,11 @@ function fetchAboutPageData() {
         type: types.FETCH_ABOUT_PAGE_FAILED,
         payload: err.code
       }))
+
+    return result
   }
 }
 
-export default fetchAboutPageData
+export {
+  fetchAboutPageData
+}

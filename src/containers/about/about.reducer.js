@@ -5,10 +5,10 @@ import types from './about.constants'
 const initialState = Map({
   title: 'title',
   text: 'text',
-  _data: {
+  _data: Map({
     isFetching: false,
     isFailed: false
-  }
+  })
 })
 
 const aboutPageInfo = (state = initialState, action) => {
@@ -19,7 +19,7 @@ const aboutPageInfo = (state = initialState, action) => {
         .setIn(['_data', 'isFailed'], false)
     case types.FETCH_ABOUT_PAGE_COMPLETED:
       return state
-        .merge(action.payload)
+        .merge(action.payload.data)
         .setIn(['_data', 'isFetching'], false)
         .setIn(['_data', 'isFailed'], false)
     case types.FETCH_ABOUT_PAGE_FAILED:

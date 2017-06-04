@@ -11,8 +11,8 @@ environment = 'production'
 // run npm test => 'test',
 // npm run build => 'production'.
 const BaseURL = {
-  production: 'https://chvsk.dev.ikitlab.co/api/v1',
-  development: '//localhost:5000/api'
+  production: '/api',
+  development: '//localhost:3333/api'
 }
 
 /**
@@ -46,7 +46,7 @@ ajax.interceptors.request.use(
 
     // TODO: add auth token
     if (false) {
-      config.headers.Authorization = `Bearer ${auth.getToken()}`
+      //config.headers.Authorization = `Bearer ${auth.getToken()}`
     }
 
     url = `${BaseURL[environment]}${url}`

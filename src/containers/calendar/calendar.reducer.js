@@ -1,8 +1,8 @@
 import { Map } from 'immutable'
 
 const initialState = Map({
-  title: 'reducer\s info title',
-  text: 'reducer\s info text',
+  title: 'reducers info title',
+  text: 'reducers info text',
   _data: {
     isFetching: false,
     isFailed: false
